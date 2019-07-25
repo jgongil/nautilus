@@ -14,6 +14,10 @@ The app allows a **farmer** to:
 
 ![distributorApp](images/app_distributor_retailer_consumer.png)
 
+Search items by UPC:
+
+![searchItems](images/app_search.png)
+
 A transaction history will be available to show the record of every transaction performed.
 
 ![history](images/ftc_transaction_history.png)
@@ -138,6 +142,10 @@ Saving successful migration to network...
   ... 0xacbadbbf59bb092f1774e74de3edc84f36c924fc299e44dc59b400425929ebeb
 
 ```
+## Design & Architecture
+
+[write-up-UML](write-up-UML/write-up-UML.md)
+
 
 ## Built With
 
