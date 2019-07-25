@@ -41,6 +41,15 @@ contract('SupplyChain', function(accounts) {
     console.log("Retailer: accounts[3] ", accounts[3])
     console.log("Consumer: accounts[4] ", accounts[4])
 
+    it("Testing contract Ownership is correctly set in Ownable", async() => {
+        const supplyChain = await SupplyChain.deployed()
+
+        // Retrieve contract owner
+        const currentContractOwner = await supplyChain.owner.call()
+        // Verify contract owner and event
+        assert.equal(ownerID, currentContractOwner, "currentContractOwner is not set to ownerID")
+ 
+    })
     // 1st Test
     it("Testing smart contract function harvestItem() that allows a farmer to harvest coffee", async() => {
         const supplyChain = await SupplyChain.deployed()
@@ -172,6 +181,9 @@ contract('SupplyChain', function(accounts) {
         // Farmer balance before selling item to distributor
         let initialFarmerBalance = await web3.eth.getBalance(originFarmerID)
 
+        // Asign distributorID distributor role in order to execute the buyItem
+        supplyChain.addDistributor(distributorID)
+
         // Mark an item as Sold by calling function buyItem()
         await supplyChain.buyItem(upc,{from: distributorID, value: productPrice})
 
@@ -233,6 +245,9 @@ contract('SupplyChain', function(accounts) {
             eventEmitted = true
         })
 
+        // Assign retailerID retailer role in order to execute the receiveItem
+        supplyChain.addRetailer(retailerID)
+
         // Mark an item as Received by calling function receiveItem()
         await supplyChain.receiveItem(upc, {from: retailerID})
 
@@ -263,6 +278,9 @@ contract('SupplyChain', function(accounts) {
 
         // Retailer balance before selling item to consumer
         let initialRetailerBalance = await web3.eth.getBalance(retailerID)
+
+        // Assign consumerID consuer role in order to execute purchaseItem
+        supplyChain.addConsumer(consumerID)
 
         // Mark an item as Purchased by calling function purchaseItem()
         await supplyChain.purchaseItem(upc, {from: consumerID, value: productPrice})

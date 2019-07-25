@@ -9,6 +9,13 @@ body {
   margin: 0 auto;
 }
 
+.login {
+  text-align: right;
+  margin: 0 0;
+  color: rgb(250, 250, 250);
+  background-color: rgb(146, 148, 150);
+}
+
 
 .bold { 
   font-weight: bolder;

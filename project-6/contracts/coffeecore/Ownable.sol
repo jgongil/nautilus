@@ -1,10 +1,7 @@
 pragma solidity ^0.4.24;
 
-// Import access control contracts with the different roles
-import "../coffeebase/SupplyChain.sol";
-
 /// Provides basic authorization control
-contract Ownable is SupplyChain {
+contract Ownable {
     address private origOwner;
 
     // Define an Event
