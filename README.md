@@ -48,6 +48,7 @@ Please make sure you've already installed ganache-cli, Truffle and enabled MetaM
 - node: 8.9.4
 - npm: 6.9.0
 - lite-server: 2.4.0 
+- web3: 6.9.0
 
 Checking versions in your command line:
 ```
@@ -61,6 +62,9 @@ Solidity v0.4.24 (solc-js)
 $ npm version
 npm: '6.9.0',
 node: '8.9.4',
+
+$ npm web3 --version
+6.9.0
 
 ```
 
