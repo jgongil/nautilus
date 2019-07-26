@@ -134,13 +134,15 @@ npm run dev
 ```
 ## Deployment in Rinkeby
 
-The document below shows the transaction ID´s associated to every contract deployment along with the contract adress.
+The contracts were deployed in the Rinkeby network.
 
-- [Deployment in Rinkeby](deployedRinkeby.txt)
+- Base contract (SupplyChain.sol) address from the Etherscan explorer for Rinkeby https://rinkeby.etherscan.io/address/0x077f338c32407528ed064fa30e905fe41e556f44#code
 
-- Main supply chain contract can be found in the Etherscan explorer for Rinkeby https://rinkeby.etherscan.io/address/0x077f338c32407528ed064fa30e905fe41e556f44#code
+- Base contract (SupplyChain.sol) creation transaction from the Etherscan explorer for Rinkeby https://rinkeby.etherscan.io/tx/0x13d3bf00d6f5759397a814f3fc1cc56a994d0d70dad7683a2e47b38d9220a667
 
+- More details can be found in the document below which shows the transaction ID´s associated to every contract deployment along with the contract adress.
 
+  [Deployment in Rinkeby](deployedRinkeby.txt)
 
 ## Design & Architecture
 
