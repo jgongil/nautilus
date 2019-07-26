@@ -136,9 +136,11 @@ npm run dev
 
 The document below shows the transaction ID´s associated to every contract deployment along with the contract adress.
 
-Main supply chain contract can be found in the Etherscan explorer for Rinkeby https://rinkeby.etherscan.io/address/0x077f338c32407528ed064fa30e905fe41e556f44#code
+- [Deployment in Rinkeby](deployedRinkeby.txt)
 
-[Deployment in Rinkeby](deployedRinkeby.txt)
+- Main supply chain contract can be found in the Etherscan explorer for Rinkeby https://rinkeby.etherscan.io/address/0x077f338c32407528ed064fa30e905fe41e556f44#code
+
+
 
 ## Design & Architecture
 
